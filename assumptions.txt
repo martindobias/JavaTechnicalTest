@@ -1,7 +1,7 @@
 Assumptions
 - for simplicity only integer numbers are considered
-- compution is evaluated for all occurences of "apply" instruction whenever it is found in the file
+- computation is evaluated for all occurrences of "apply" instruction whenever it is found in the file
 	- provides more flexibility in expression of different computations
-	- from the specification it is not clear whether multiple occurences (or none) of the "apply" instruction shall be considered as faulty input or not or if the first occurence of "apply" instruction shall terminate the evaluation of additional instructions
+	- from the specification it is not clear whether multiple occurrences (or none) of the "apply" instruction shall be considered as faulty input or not or if the first occurrence of "apply" instruction shall terminate the evaluation of additional instructions
 - all instruction are for simplicity converted to upper case
-- provides printing to standard output and standard error stream, it is upon operating system to print the streams on screen - sometimes output to one stream can be delayed and messages then appear in wrong order - this is expected behaviour, in real environment the streams would be separated (e.g. logged by some standard logging framework like log4j, ...)
+

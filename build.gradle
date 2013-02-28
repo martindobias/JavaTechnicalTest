@@ -16,3 +16,16 @@ jar {
 		attributes 'Main-Class': 'dk.cngroup.javatechnicaltest.Calculator', 'Implementation-Title': 'Java Technical Test', 'Implementation-Version': version, 'Class-Path': 'lib/commons-cli-1.2.jar'
 	}
 }
+
+task dist(type: Zip) {
+    dependsOn jar
+    from 'build/libs'
+    into('lib') {
+        from configurations.runtime
+    }
+    into('') {
+        from 'test1.txt'
+        from 'test2.txt'
+        from 'src/main/windows/run.bat'
+    }
+}

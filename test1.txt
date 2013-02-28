@@ -1,5 +1,6 @@
 add 3
 multiply 5
+
   apply 2
 add     10
 apply 3
