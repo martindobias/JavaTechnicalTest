@@ -3,7 +3,7 @@ sourceCompatibility = 1.5
 version = '1.0'
 
 repositories {
-	mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
@@ -12,9 +12,9 @@ dependencies {
 }
 
 jar {
-	manifest {
-		attributes 'Main-Class': 'dk.cngroup.javatechnicaltest.Calculator', 'Implementation-Title': 'Java Technical Test', 'Implementation-Version': version, 'Class-Path': 'lib/commons-cli-1.2.jar'
-	}
+    manifest {
+        attributes 'Main-Class': 'dk.cngroup.javatechnicaltest.Calculator', 'Implementation-Title': 'Java Technical Test', 'Implementation-Version': version, 'Class-Path': 'lib/commons-cli-1.2.jar'
+    }
 }
 
 task dist(type: Zip) {
@@ -23,9 +23,7 @@ task dist(type: Zip) {
     into('lib') {
         from configurations.runtime
     }
-    into('') {
-        from 'test1.txt'
-        from 'test2.txt'
-        from 'src/main/windows/run.bat'
-    }
+    from 'test1.txt'
+    from 'test2.txt'
+    from 'src/main/windows/run.bat'
 }
